@@ -1,7 +1,7 @@
 package gamerunning;
 
-// Game Contra
-public class ContraGame {
+// Game Contra, implement GamingConsole
+public class ContraGame implements GamingConsole {
     // Các method di chuyển
     public void up() {
         System.out.println("up");

@@ -1,7 +1,7 @@
 package gamerunning;
 
-// Game Mario
-public class MarioGame {
+// Game Mario implement GamingConsole
+public class MarioGame implements GamingConsole {
 
     // Các method di chuyển
     public void up() {
