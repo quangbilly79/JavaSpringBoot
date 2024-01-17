@@ -1,14 +1,19 @@
-package gamerunning;
+package gamerunningspring;
 
 
 // Class main để khởi tạo và chạy các thứ
 
-import gamerunningspring.GameRunnerSpring;
 import gamerunningspring.MarioGameSpring;
+import gamerunningspring.GamingConsoleSpring;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class AppGamingBasic {
+
+public class AppGamingBasicSpring {
 
     public static void main(String[] args) {
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(GamingSpringConfigurationClass.class);
+
         // Tạo 1 instance game Mario, sử dụng GamingConsole interface
         GamingConsole game = new MarioGameSpring();
 
