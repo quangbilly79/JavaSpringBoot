@@ -7,7 +7,8 @@ import java.util.Arrays;
 public class SpringTest {
     public static void main(String[] args) {
         // 1: Tạo 1 Spring context vs new AnnotationConfigApplicationContext
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfigurationClass.class);
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(SpringConfigurationClassTest.class);
 
 
         // 2: Tạo 1 class configuration để Spring context quản lý (SpringConfigurationClass)

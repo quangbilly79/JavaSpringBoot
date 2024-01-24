@@ -1,5 +1,8 @@
 package gamerunningspring;
 
+import org.springframework.stereotype.Component;
+
+
 public interface GamingConsoleSpring {
 
     public void up();

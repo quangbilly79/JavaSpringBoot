@@ -1,13 +1,18 @@
 package gamerunningspring;
 
 import gamerunningspring.GamingConsoleSpring;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 // Class chung để chạy các game tương ứng
+// Thêm @Component thay vì tạo Bean để getInstance
+@Component
 public class GameRunnerSpring {
     private final GamingConsoleSpring game;
 
     // Constructor: Tạo game tg ứng, thay vì fix cứng vs Mario game thì dùng Gaming Console Interface
-    public GameRunnerSpring(GamingConsoleSpring game) {
+    // Thêm @Qualifier để ưu tiên trong TH nhiều @Component cùng Class cha
+    public GameRunnerSpring(@Qualifier("MarioGameSpring") GamingConsoleSpring game) {
         this.game = game;
     }
 
