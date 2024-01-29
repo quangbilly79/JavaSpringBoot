@@ -5,8 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
-@ComponentScan("gamerunningspring")
+
 public class GamingSpringConfigurationClass {
     // Tạo Bean method lấy trực tiếp interface GameConsole
 //    @Bean
