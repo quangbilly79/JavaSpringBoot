@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class JDBCCommandLineRunner implements CommandLineRunner {
     // Khởi tạo 1 repo từ JDBCTemplate Class. Vì là field nên cần @Autowired
     @Autowired
-    JDBCTemplate repository;
+    JDBCTemplateRepository repository;
 
     // Override method run, chạy method tg ứng trong repo bên trên (insert/delete dl)
     // với tham số truyền vào tg ứng
@@ -22,6 +22,9 @@ public class JDBCCommandLineRunner implements CommandLineRunner {
         repository.insert(new Course(3, "a", "a"));
 
         repository.deleteById(1);
+
+        System.out.println(repository.findById(2)); // Course{id=2, name='g', author='g'} (toString method)
+        System.out.println(repository.findById(3)); // Course{id=3, name='a', author='a'}
 
     }
 }
