@@ -1,4 +1,4 @@
-package JDBCTest;
+package SpringJDBCTest;
 
 
 // Class trả về trong rest api vs constructor và getter các thứ

@@ -1,4 +1,4 @@
-package JDBCTest;
+package SpringJDBCTest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -21,7 +21,7 @@ public class JDBCCommandLineRunner implements CommandLineRunner {
         repository.insert(new Course(2, "g", "g"));
         repository.insert(new Course(3, "a", "a"));
 
-        repository.deleteById(1);
+        // repository.deleteById(1);
 
         System.out.println(repository.findById(2)); // Course{id=2, name='g', author='g'} (toString method)
         System.out.println(repository.findById(3)); // Course{id=3, name='a', author='a'}
