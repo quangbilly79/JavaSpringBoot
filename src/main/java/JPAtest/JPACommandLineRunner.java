@@ -1,7 +1,5 @@
-package JPATest;
+package JPAtest;
 
-import JPATest.Course;
-import JPATest.JPARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -19,12 +17,12 @@ public class JPACommandLineRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("CommandLineRunner run------------");
-        repository.insert(new JPATest.Course(1, "JPA_1", "z"));
-        repository.insert(new JPATest.Course(1, "JPA_1_update", "y"));
-        repository.insert(new JPATest.Course(2, "JPA_2", "g"));
-        repository.insert(new JPATest.Course(3, "JPA_1", "a"));
-        repository.insert(new JPATest.Course(4, "JPA_2", "a"));
-        repository.insert(new JPATest.Course(5, "JPA_2", "a"));
+        repository.insert(new JPAtest.Course(1, "JPA_1", "z"));
+        repository.insert(new JPAtest.Course(1, "JPA_1_update", "y"));
+        repository.insert(new JPAtest.Course(2, "JPA_2", "g"));
+        repository.insert(new JPAtest.Course(3, "JPA_1", "a"));
+        repository.insert(new JPAtest.Course(4, "JPA_2", "a"));
+        repository.insert(new JPAtest.Course(5, "JPA_2", "a"));
 
         // repository.delete(1);
 

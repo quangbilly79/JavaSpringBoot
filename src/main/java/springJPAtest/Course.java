@@ -1,4 +1,4 @@
-package JPATest;
+package springJPAtest;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -30,7 +30,7 @@ public class Course {
         this.author = "default_author";
     }
     // Nếu field là private thì cần thêm Getter để Spring Boot gọi đc đến
-    public long getId() {
+    public int getId() {
         return id;
     }
 
