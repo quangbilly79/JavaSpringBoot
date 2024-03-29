@@ -2,6 +2,7 @@ package springbootwithJPA;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 // Class trả về trong rest api vs constructor và getter các thứ
@@ -9,9 +10,10 @@ import javax.persistence.Id;
 @Entity(name="course_test")
 public class Course {
     // Map các cột vs @Column(name="colname"), cùng tên thì k cần annotation này luôn
-    // riêng cột Id có thể map riêng với @Id.
+    // riêng cột Id có thể map riêng với @Id. Auto Increment default value vs @GeneratedValue
     // Class JPA luôn cần 1 cột với @Id làm identifier (k sẽ lỗi)
     @Id
+    @GeneratedValue
     private int id;
     @Column(name="name")
     private String name;

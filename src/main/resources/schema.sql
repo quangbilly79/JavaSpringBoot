@@ -6,6 +6,6 @@ primary key (id)
 )
 ;
 
-insert into course_test values (1, 'name1', 'author1');
-insert into course_test values (2, 'name2', 'author2');
-insert into course_test values (3, 'name3', 'author3');
+insert into course_test values (100, 'name1', 'author1');
+insert into course_test values (101, 'name2', 'author2');
+insert into course_test values (102, 'name3', 'author3');
