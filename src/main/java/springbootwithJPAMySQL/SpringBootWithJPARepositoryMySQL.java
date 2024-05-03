@@ -11,7 +11,8 @@ public interface SpringBootWithJPARepositoryMySQL extends JpaRepository<Course, 
 
     // Riêng cần custom query thì ms cần tạo riêng 1 hàm trong này
     // Trả về List<Object[]>, có thể convert sau tùy tình huống
-    @Query("SELECT c.name, COUNT(c) AS count_name FROM course_test c GROUP BY c.name HAVING COUNT(c) > 1")
+    @Query("SELECT c.name, COUNT(c) AS count_name FROM " +
+            "course_test c GROUP BY c.name HAVING COUNT(c) > 1")
     List<Object[]> findDuplicateCourses();
 
     }

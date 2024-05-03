@@ -61,5 +61,20 @@ public class RestApiControllerJPAMySQL {
         // http://localhost:8081/courses_del/
     }
 
+    // Có thể chạy custom query vs post/get
+    @GetMapping("/courses_custom_query/")
+    public String postCustomQuery() {
+        // Chạy custom query
+        List<Object[]> returnResult = repository.findDuplicateCourses();
+        String result = "";
+        for (Object[] object:returnResult) {
+            String name = (String) object[0];
+            Long count = (Long) object[1];
+            result += " " + name + " " + count + "\n";
+        }
+        return result;
+
+    }
+
 
 }
